@@ -16,7 +16,7 @@ starting_advent_of_code_year = 2021  # You can go as early as 2015.
 last_advent_of_code_year = (
     2021  # The setup will download all advent of code data up until that date included
 )
-last_advent_of_code_day = 25  # If the year isn't finished, the setup will download days up until that day included for the last year
+last_advent_of_code_day = 1  # If the year isn't finished, the setup will download days up until that day included for the last year
 
 # Code
 MAX_RECONNECT_ATTEMPT = 0
@@ -54,7 +54,7 @@ for y in years:
             if not os.path.exists(day_pos + "/solution.py"):
                 code = open(day_pos + "/solution.py", "w+")
                 code.write(
-                    f'# Advent of Code {y} Day {d} Solution\n# Author = {author}\n\nimport time\n\nstart = time.time()\nwith open((__file__.rstrip("solution.py") + "input.txt"), \'r\') as input_file:\n    input = input_file.readlines()\n\n\n\nprint("Part One : ")\n\n\n\nprint("Part Two : ")\n\n\n\nprint("Time Taken: ", time.time() - start)'
+                    f'# Advent of Code {y} Day {d} Solution\n# Author: {author}\n\nimport time\n\nstart = time.time()\nwith open((__file__.rstrip("solution.py") + "input.txt"), \'r\') as input_file:\n    input = input_file.readlines()\n\n\n\nprint("Part One : ")\n\n\n\nprint("Part Two : ")\n\n\n\nprint("Time Taken: ", time.time() - start)'
                 )
                 code.close()
         if (
