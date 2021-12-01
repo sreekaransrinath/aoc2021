@@ -1,3 +1,6 @@
+import time
+
+start = time.time()
 # Read Input
 with open("Day1/input.txt") as f:
     input = [int(line) for line in f.readlines()]
@@ -45,3 +48,4 @@ def count(input, sliding_window_size):
 
 print(count(input, 1))
 print(count(input, 3))
+print(f"Time taken: {time.time() - start}")
