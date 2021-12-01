@@ -34,16 +34,16 @@ for y in years:
     print("Year " + str(y))
     if not os.path.exists(base_pos + str(y)):
         os.mkdir(base_pos + str(y))
-    year_pos = base_pos + str(y)
+    year_pos = base_pos
     for d in (
         d
         for d in days
         if (y < last_advent_of_code_year or d <= last_advent_of_code_day)
     ):
         print("    Day " + str(d))
-        if not os.path.exists(year_pos + "/" + str(d)):
-            os.mkdir(year_pos + "/" + str(d))
-        day_pos = year_pos + "/" + str(d)
+        if not os.path.exists(year_pos + "/Day " + str(d)):
+            os.mkdir(year_pos + "/Day " + str(d))
+        day_pos = year_pos + "/Day " + str(d)
         if MAKE_CODE_TEMPLATE:
             if not os.path.exists(day_pos + "/archived_solutions.py"):
                 code = open(day_pos + "/archived_solutions.py", "w+")
