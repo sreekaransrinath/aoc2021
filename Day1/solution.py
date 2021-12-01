@@ -29,12 +29,19 @@ with open("Day1/input.txt") as f:
 
 # Implementing these, we can form a general solution as follows:
 
-def count_increased_depths(input, sliding_window_size):
-    count = 0
-    for i in range(len(input) - sliding_window_size):
-        if input[i] < input[i + sliding_window_size]:
-            count += 1
-    return count
+# def count_increased_depths(input, sliding_window_size):
+#     count = 0
+#     for i in range(len(input) - sliding_window_size):
+#         if input[i] < input[i + sliding_window_size]:
+#             count += 1
+#     return count
 
-print(count_increased_depths(input, 1))
-print(count_increased_depths(input, 3))
+# print(count_increased_depths(input, 1))
+# print(count_increased_depths(input, 3))
+
+# List Comprehensions, for the heck of it
+def count(input, sliding_window_size):
+    return len([i for i in range(len(input) - sliding_window_size) if input[i] < input[i + sliding_window_size]])
+
+print(count(input, 1))
+print(count(input, 3))
