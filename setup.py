@@ -1,5 +1,6 @@
 import requests
 import os
+import sys
 
 # USER SPECIFIC PARAMETERS
 base_pos = "./"  # Folders will be created here. If you want to make a parent folder, change this to ex "./adventofcode/"
@@ -16,7 +17,7 @@ starting_advent_of_code_year = 2021  # You can go as early as 2015.
 last_advent_of_code_year = (
     2021  # The setup will download all advent of code data up until that date included
 )
-last_advent_of_code_day = 1  # If the year isn't finished, the setup will download days up until that day included for the last year
+last_advent_of_code_day = 25  # If the year isn't finished, the setup will download days up until that day included for the last year
 
 # Code
 MAX_RECONNECT_ATTEMPT = 0
@@ -78,6 +79,7 @@ for y in years:
                             input.close()
                         else:
                             print("        Server response for input is not valid.")
+                            sys.exit(1)
                     done = True
                 except requests.exceptions.RequestException:
                     error_count += 1
