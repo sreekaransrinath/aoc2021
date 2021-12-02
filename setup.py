@@ -55,7 +55,7 @@ for y in years:
             if not os.path.exists(day_pos + "/solution.py"):
                 code = open(day_pos + "/solution.py", "w+")
                 code.write(
-                    f'# Advent of Code {y} Day {d} Solution\n# Author: {author}\n\nimport time\n\nstart = time.time()\nwith open((__file__.rstrip("solution.py") + "input.txt"), \'r\') as input_file:\n    input = input_file.readlines()\n\n\n\nprint("Part One : ")\n\n\n\nprint("Part Two : ")\n\n\n\nprint("Time Taken: ", time.time() - start)'
+                    f'# Advent of Code {y} Day {d} Solution\n# Author: {author}\n\nimport time\n\nstart = time.time()\nwith open((__file__.rstrip("solution.py") + "input.txt"), \'r\') as input_file:\n    input = input_file.readlines()\n\nprint("Part One: ")\n\n\n\nprint("Part Two: ")\n\n\n\nprint("Time Taken: ", time.time() - start)'
                 )
                 code.close()
         if (
