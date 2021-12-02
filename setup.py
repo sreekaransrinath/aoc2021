@@ -11,7 +11,7 @@ MAKE_CODE_TEMPLATE = True  # Set to false to not make code templates. Note that 
 MAKE_URL = True  # Set to false to not create a direct url link in the folder.
 author = "Sreekaran"  # Name automatically put in the code templates.
 OVERWRITE = False  # If you really need to download the whole thing again, set this to true. As the creator said, AoC is fragile; please be gentle. Statements and Inputs do not change. This will not overwrite codes.
-
+OVERWRITE_STATEMENTS = True
 # DATE SPECIFIC PARAMETERS
 starting_advent_of_code_year = 2021  # You can go as early as 2015.
 last_advent_of_code_year = (
@@ -99,7 +99,7 @@ for y in years:
                     )
                     done = True
         if DOWNLOAD_STATEMENTS and (
-            not os.path.exists(day_pos + "/statement.html") or OVERWRITE
+            not os.path.exists(day_pos + "/statement.html") or OVERWRITE_STATEMENTS
         ):
             done = False
             error_count = 0
